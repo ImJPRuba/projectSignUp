@@ -1,0 +1,138 @@
+::-webkit-scrollbar{
+    background-color: rgba(255, 255, 255, 0);
+    width: 0;
+}
+::-webkit-scrollbar-thumb{
+    background: #0042e800;
+
+}
+
+
+
+body {
+    margin: 0;
+    line-height: normal;
+   
+  }
+
+ .mybackground-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+.TYY{
+    
+    font-family: var(--font-valorant);
+    color: black;
+}
+.JP{
+    font-size: 17spx;
+    font-family: var(--font-aldrich);
+}
+.you{
+    font-size: 200px;
+    font-family: var(--font-valorant);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.377);
+}
+.Thankyou {
+    text-align: center;
+    position: absolute;
+    top: 175px;
+    left: 128px;
+    width: 900px;
+    height: 200px;
+    object-fit: cover;
+}
+
+      .Thank {    
+        position: absolute;
+        top: 113px;
+        left: 85px;
+        border-radius: 10px;
+       
+        
+      }
+
+      .stack {
+        display: grid;
+        grid-template-columns: 1fr; 
+      }
+      .stack span {
+        font-weight: bold;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        font-size: 8rem;
+        --stack-height: calc(100% / var(--stacks) - 1px);
+        --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+        --clip-top: calc(var(--stack-height) * var(--index));
+        --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+        clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+        animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 125ms), glitch 2.5s ease infinite 2s alternate-reverse;
+      }
+      
+      .stack span:nth-child(odd) { --glitch-translate: 100px; }
+      .stack span:nth-child(even) { --glitch-translate: -8px; }
+      
+      @keyframes stack {
+        0% {
+          opacity: 0;
+          transform: translateX(-70%);
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+        };
+        60% {
+          opacity: 0.5;
+          transform: translateX(70%);
+        }
+        80% {
+          transform: none;
+          opacity: 1;
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+        }
+        100% {
+          text-shadow: none;
+        }
+      }
+      
+      @keyframes glitch {
+        0% {
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+          transform: translate(var(--glitch-translate));
+        }
+        2% {
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+        }
+        4%, 100% {  text-shadow: none; transform: none; }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.signupform {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    
+    
+  }
